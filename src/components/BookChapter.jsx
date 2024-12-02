@@ -6,9 +6,11 @@ const BookChapter = ({chapter, setTask, scroll}) => {
     return (
         <div>
             <h1>{chapter["title"]}</h1>
-            {chapter["tasks"].map((task) =>
-                <BookTask task={task} setTask={setTask} scroll={scroll} key={task.title}/>
-            )}
+            <div className="tasks">
+                {chapter["tasks"].map((task) =>
+                    <BookTask task={task} setTask={setTask} scroll={scroll} key={task.title}/>
+                )}
+            </div>
             {chapter["topics"].map((topic) =>
                 <BookTopic topic={topic} setTask={setTask} scroll={scroll} key={topic.title}/>
             )}

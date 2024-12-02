@@ -20,3 +20,11 @@
 .task:hover {
     background-color: lightgray;
 }
+
+.book-info {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border: 1px solid teal;
+    border-radius: 5px;
+}

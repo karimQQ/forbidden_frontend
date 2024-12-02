@@ -8,7 +8,7 @@ import BookAnswer from "../components/BookAnswer";
 const Book = () => {
     const {subject, number, book} = useParams()
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
     const [task, setTask] = useState(null)
 
     const answer = createRef()
