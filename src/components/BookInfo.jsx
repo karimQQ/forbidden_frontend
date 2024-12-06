@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const BookInfo = ({book}) => {
     return (
         <div className="book-info">
-            <img src={"https://gdz-ru.work" + book["cover"]["url"]}/>
+            <img src={"https://forbiddengdz.ru/gdz" + book["cover"]["url"]} alt="book"/>
             <Link to={book["url"]}>{book.title}</Link>
         </div>);
 };

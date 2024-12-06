@@ -24,7 +24,7 @@ const BookAnswer = ({task_url}) => {
                     <Loader/>
                     :
                     <div>
-                        <img src={"https://gdz-ru.work" + answer[0]["images"][0]["url"]} alt="loh"/>
+                        <img src={"https://forbiddengdz.ru/gdz" + answer[0]["images"][0]["url"]} alt="answer"/>
                     </div>
             }
         </div>
