@@ -23,8 +23,10 @@ const BookAnswer = ({task_url}) => {
                 isAnswerLoading ?
                     <Loader/>
                     :
-                    <div>
-                        <img src={"https://forbiddengdz.ru/gdz" + answer[0]["images"][0]["url"]} alt="answer"/>
+                    <div className="images">
+                        {answer[0]["images"].map(e => <img className="image"
+                                                           src={"https://forbiddengdz.ru/gdz" + e["url"]}
+                                                           alt="answer"/>)}
                     </div>
             }
         </div>
