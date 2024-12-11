@@ -1,15 +1,14 @@
 import React, {createRef, useEffect, useState} from 'react';
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useFetching} from "../hooks/useFetching";
 import Loader from "../components/UI/Loader/Loader";
 import BookStructure from "../components/BookStructure";
 import BookAnswer from "../components/BookAnswer";
 
 const Book = () => {
-    const {subject, number, book} = useParams()
+    const {subject, number, book, task} = useParams()
 
     const [data, setData] = useState({})
-    const [task, setTask] = useState(null)
 
     const answer = createRef()
 
@@ -24,9 +23,14 @@ const Book = () => {
     }, [subject, number, book]);
 
     const scrollToAnswer = () => {
-        console.log(answer.current)
         answer.current.scrollIntoView();
     }
+
+    useEffect(() => {
+        if (task) {
+            scrollToAnswer()
+        }
+    }, [task]);
 
     return (
         <div>
@@ -37,9 +41,9 @@ const Book = () => {
                     <Loader/>
                     :
                     <div>
-                        <BookStructure structure={data["structure"]} setTask={setTask} scroll={scrollToAnswer}/>
+                        <BookStructure structure={data["structure"]}/>
                         <div ref={answer}>
-                            {task !== null && <BookAnswer task_url={task}/>}
+                            {task && <BookAnswer task_url={`/${subject}/${number}/${book}/${task}`}/>}
                         </div>
                     </div>
             }

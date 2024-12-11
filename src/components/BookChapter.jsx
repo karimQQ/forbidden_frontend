@@ -2,17 +2,17 @@ import React from 'react';
 import BookTopic from "./BookTopic";
 import BookTask from "./BookTask";
 
-const BookChapter = ({chapter, setTask, scroll}) => {
+const BookChapter = ({chapter}) => {
     return (
         <div>
             <h1>{chapter["title"]}</h1>
             <div className="tasks">
                 {chapter["tasks"].map((task) =>
-                    <BookTask task={task} setTask={setTask} scroll={scroll} key={task.title}/>
+                    <BookTask task={task} key={task.title}/>
                 )}
             </div>
             {chapter["topics"].map((topic) =>
-                <BookTopic topic={topic} setTask={setTask} scroll={scroll} key={topic.title}/>
+                <BookTopic topic={topic} key={topic.title}/>
             )}
         </div>
     );

@@ -14,6 +14,7 @@ const AppRouter = () => {
             <Route path="/privacy_policy" element={<PrivacyPolicy/>}/>
             <Route path="/games" element={<Games/>}/>
             <Route path="/:subject/:number/:book" element={<Book/>}/>
+            <Route path="/:subject/:number/:book/:task" element={<Book/>}/>
             <Route path="/:number" element={<ClassNumber/>}/>
             <Route path="/:subject/:number" element={<Subject/>}/>
         </Routes>

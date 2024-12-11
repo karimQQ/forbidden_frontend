@@ -1,13 +1,11 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-const BookTask = ({task, setTask,scroll}) => {
+const BookTask = ({task}) => {
     return (
-        <div className="task" onClick={() => {
-            setTask(task["url"])
-            scroll()
-        }}>
+        <Link className="task" to={task["url"]}>
             {task["title"]}
-        </div>
+        </Link>
     );
 };
 
