@@ -17,7 +17,7 @@ const Subject = () => {
 
     useEffect(() => {
         fetchBooks()
-    }, []);
+    }, [subject, number]);
 
     return (
         <div>

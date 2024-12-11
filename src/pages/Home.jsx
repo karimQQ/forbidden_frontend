@@ -37,7 +37,7 @@ const Home = () => {
             <h1>Еще ссылки</h1>
             <p><Link to="https://t.me/gdz_forbidden" target="_blank">telegram</Link></p>
             <p><Link to="/games">Игры</Link></p>
-            <p><Link to="https://chromewebstore.google.com/detail/forbidden-gdz/gjdmngheaapadgpddimanehmihikjlcp">Расширение</Link></p>
+            <p><Link to="https://chromewebstore.google.com/detail/forbidden-gdz/gjdmngheaapadgpddimanehmihikjlcp" target="_blank">Расширение</Link></p>
         </div>
     );
 };

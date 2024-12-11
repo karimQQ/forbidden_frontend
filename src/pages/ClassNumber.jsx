@@ -16,7 +16,7 @@ const ClassNumber = () => {
 
     useEffect(() => {
         fetchSubject()
-    }, []);
+    }, [number]);
 
     const getNumber = () => {
         return number.substring(0, number.indexOf('-'))

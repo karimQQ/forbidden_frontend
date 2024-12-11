@@ -1,5 +1,5 @@
 import React, {createRef, useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useFetching} from "../hooks/useFetching";
 import Loader from "../components/UI/Loader/Loader";
 import BookStructure from "../components/BookStructure";
@@ -21,7 +21,7 @@ const Book = () => {
 
     useEffect(() => {
         fetchData()
-    }, []);
+    }, [subject, number, book]);
 
     const scrollToAnswer = () => {
         console.log(answer.current)
