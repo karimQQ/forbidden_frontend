@@ -38,8 +38,6 @@ const Home = () => {
                 <p><Link to="/9-klass">9</Link></p>
                 <p><Link to="/10-klass">10</Link></p>
                 <p><Link to="/11-klass">11</Link></p>
-                <h1>Еще ссылки</h1>
-                <p><Link to="https://t.me/gdz_forbidden" target="_blank">telegram</Link></p>
             </main>
         </div>
     );

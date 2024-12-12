@@ -1,11 +1,12 @@
 .navbar {
-    height: 50px;
     display: flex;
+    height: 50px;
     background-color: lightgray;
+    justify-content: space-between;
 }
 
 .navbar_links {
-
+    display: flex;
 }
 
 .navbar_link {

@@ -43,6 +43,9 @@ const Navbar = () => {
                 <Link className={classes.navbar_link} to="/extension">Расширение</Link>
                 <Link className={classes.navbar_link} to="/games">Игры</Link>
             </div>
+            <div className={classes.navbar_links}>
+                <Link className={classes.navbar_link} to="https://t.me/gdz_forbidden">Телеграм канал разраба</Link>
+            </div>
         </header>
     );
 };
