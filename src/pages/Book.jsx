@@ -4,6 +4,7 @@ import {useFetching} from "../hooks/useFetching";
 import Loader from "../components/UI/Loader/Loader";
 import BookStructure from "../components/BookStructure";
 import BookAnswer from "../components/BookAnswer";
+import Navbar from "../components/Navbar/Navbar";
 
 const Book = () => {
     const {subject, number, book, task} = useParams()
@@ -34,19 +35,22 @@ const Book = () => {
 
     return (
         <div>
-            {dataError ?
-                <h1>{dataError}</h1>
-                :
-                isDataLoading ?
-                    <Loader/>
+            <Navbar/>
+            <main>
+                {dataError ?
+                    <h1>{dataError}</h1>
                     :
-                    <div>
-                        <BookStructure structure={data["structure"]}/>
-                        <div ref={answer}>
-                            {task && <BookAnswer task_url={`/${subject}/${number}/${book}/${task}`}/>}
+                    isDataLoading ?
+                        <Loader/>
+                        :
+                        <div>
+                            <BookStructure structure={data["structure"]}/>
+                            <div ref={answer}>
+                                {task && <BookAnswer task_url={`/${subject}/${number}/${book}/${task}`}/>}
+                            </div>
                         </div>
-                    </div>
-            }
+                }
+            </main>
         </div>
     );
 };

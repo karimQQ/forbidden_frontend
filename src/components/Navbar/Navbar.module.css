@@ -1,0 +1,28 @@
+.navbar {
+    height: 50px;
+    display: flex;
+    background-color: lightgray;
+}
+
+.navbar_links {
+
+}
+
+.navbar_link {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    padding-inline: 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar_link:hover {
+    background-color: darkgray;
+}
+
+.active_link {
+    color: orange;
+}

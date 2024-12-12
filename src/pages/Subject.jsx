@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import {useFetching} from "../hooks/useFetching";
 import Loader from "../components/UI/Loader/Loader";
 import BooksList from "../components/BooksList";
+import Navbar from "../components/Navbar/Navbar";
 
 const Subject = () => {
     const {subject, number} = useParams()
@@ -21,16 +22,19 @@ const Subject = () => {
 
     return (
         <div>
-            {booksError ?
-                <h1>{booksError}</h1>
-                :
-                isBooksLoading ?
-                    <Loader/>
+            <Navbar/>
+            <main>
+                {booksError ?
+                    <h1>{booksError}</h1>
                     :
-                    <div>
-                        <BooksList books={data["books"]}/>
-                    </div>
-            }
+                    isBooksLoading ?
+                        <Loader/>
+                        :
+                        <div>
+                            <BooksList books={data["books"]}/>
+                        </div>
+                }
+            </main>
         </div>
     );
 };

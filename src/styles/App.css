@@ -1,3 +1,11 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 10px;
+}
+
 .structure {
     display: flex;
     flex-direction: column;

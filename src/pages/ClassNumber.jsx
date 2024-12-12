@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import {useFetching} from "../hooks/useFetching";
 import Loader from "../components/UI/Loader/Loader";
 import SubjectsList from "../components/SubjectsList";
+import Navbar from "../components/Navbar/Navbar";
 
 const ClassNumber = () => {
     const {number} = useParams()
@@ -24,17 +25,20 @@ const ClassNumber = () => {
 
     return (
         <div>
-            {subjectsError ?
-                <h1>{subjectsError}</h1>
-                :
-                isSubjectsLoading ?
-                    <Loader/>
+            <Navbar/>
+            <main>
+                {subjectsError ?
+                    <h1>{subjectsError}</h1>
                     :
-                    <div>
-                        <SubjectsList subjects={Object.values(data["subjects"]["1"])}
-                                      intersects={data["intersects"]["1"]} classNumber={getNumber()}/>
-                    </div>
-            }
+                    isSubjectsLoading ?
+                        <Loader/>
+                        :
+                        <div>
+                            <SubjectsList subjects={Object.values(data["subjects"]["1"])}
+                                          intersects={data["intersects"]["1"]} classNumber={getNumber()}/>
+                        </div>
+                }
+            </main>
         </div>
     );
 };
