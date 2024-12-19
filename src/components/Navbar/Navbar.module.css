@@ -41,6 +41,10 @@
     border-inline: 1px solid teal;
 }
 
+.navbar_dropdown_button_active {
+    background-color: darkgray;
+}
+
 .navbar_dropdown_list {
     position: absolute;
     display: flex;

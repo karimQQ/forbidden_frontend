@@ -44,6 +44,7 @@ const Book = () => {
                         <Loader/>
                         :
                         <div>
+                            <h1>{data["book"]["title"]}</h1>
                             <BookStructure structure={data["structure"]}/>
                             <div ref={answer}>
                                 {task && <BookAnswer task_url={`/${subject}/${number}/${book}/${task}`}/>}

@@ -5,7 +5,7 @@ import BookTask from "./BookTask";
 const BookChapter = ({chapter}) => {
     return (
         <div>
-            <h1>{chapter["title"]}</h1>
+            <h2>{chapter["title"]}</h2>
             <div className="tasks">
                 {chapter["tasks"].map((task) =>
                     <BookTask task={task} key={task.title}/>

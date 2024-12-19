@@ -13,10 +13,12 @@ const Navbar = () => {
                 <div className={classes.navbar_dropdown}
                      onMouseOver={() => setMouseOver(true)}
                      onMouseOut={() => setMouseOver(false)}>
-                    <div className={classes.navbar_dropdown_button} onClick={() => {
-                        setClicked(!clicked)
-                        setMouseOver(false)
-                    }}>
+                    <div
+                        className={clicked ? classes.navbar_dropdown_button + ' ' + classes.navbar_dropdown_button_active : classes.navbar_dropdown_button}
+                        onClick={() => {
+                            setClicked(!clicked)
+                            setMouseOver(false)
+                        }}>
                         Выбрать класс
                     </div>
                     {
@@ -44,7 +46,7 @@ const Navbar = () => {
                 <Link className={classes.navbar_link} to="/games">Игры</Link>
             </div>
             <div className={classes.navbar_links}>
-                <Link className={classes.navbar_link} to="https://t.me/gdz_forbidden">Телеграм канал разраба</Link>
+                <Link className={classes.navbar_link} to="https://t.me/gdz_forbidden">Телеграм канал</Link>
             </div>
         </header>
     );
