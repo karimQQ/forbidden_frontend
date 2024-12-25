@@ -7,6 +7,7 @@
 
 .navbar_links {
     display: flex;
+    font-size: 14px;
 }
 
 .navbar_link {
@@ -53,6 +54,7 @@
     background-color: lightgrey;
     width: 150px;
     border: 1px solid teal;
+    font-size: 14px;
 }
 
 .navbar_dropdown_link {

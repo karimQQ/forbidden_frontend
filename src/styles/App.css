@@ -46,3 +46,8 @@ main {
 .image {
     display: block;
 }
+
+.finder {
+    width: 500px;
+    display: flex;
+}

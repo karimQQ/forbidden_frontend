@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from "../components/Navbar/Navbar";
 import {Link} from "react-router-dom";
+import Finder from "../components/Finder";
+import ExtensionAnswer from "../components/ExtensionAnswer";
 
 const Extension = () => {
+    const [url, setUrl] = useState('')
+
+
     return (
         <div>
             <Navbar/>
@@ -15,6 +20,10 @@ const Extension = () => {
                     </span>
                     </Link>
                 </p>
+                <Finder placeholder="Введите URL задания" callback={(text) => setUrl(text)}/>
+                {url !== '' &&
+                    <ExtensionAnswer url={url}/>
+                }
             </main>
         </div>
     );
