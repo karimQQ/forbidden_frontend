@@ -7,7 +7,7 @@ const ExtensionAnswer = ({url}) => {
         return (
             <StepikAnswer url={url}/>
         )
-    } else if (/https:\/\/docs.google.com\/forms\/d\/e\/*/.test(url)) {
+    } else if (/https:\/\/docs.google.com\/forms\/d\/e\/*/.test(url) || /https:\/\/forms.gle\/*/.test(url)) {
         return (
             <GoogleFormsAnswers url={url}/>
         )
