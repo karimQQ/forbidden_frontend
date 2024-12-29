@@ -28,10 +28,10 @@ const Book = () => {
     }
 
     useEffect(() => {
-        if (task) {
+        if (task && answer.current) {
             scrollToAnswer()
         }
-    }, [task]);
+    }, [task, answer]);
 
     return (
         <div>

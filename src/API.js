@@ -32,12 +32,17 @@ class API {
         }
     }
 
-    getFormIdByUrl(url) {
-        if (!/https:\/\/docs.google.com\/forms\/d\/e\/*/.test(url)) {
+    async getFormIdByUrl(url) {
+        if (/https:\/\/docs.google.com\/forms\/d\/e\/*/.test(url)) {
+            const split = url.split(/[? /]+/);
+            return split[split.indexOf('e') + 1]
+        } else if (/https:\/\/forms.gle\/*/.test(url)) {
+            const result = await (await fetch(`https://forbiddengdz.ru/api/google_forms/form_id?url=${url}`)).json()
+            console.log(result)
+            return result
+        } else {
             throw {message: "Неподходящая страница"}
         }
-        const split = url.split(/[? /]+/);
-        return split[split.indexOf('e') + 1]
     }
 
     async getForm(url) {

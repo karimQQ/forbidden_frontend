@@ -6,7 +6,8 @@ const BookInfo = ({book}) => {
         <div className="book-info">
             <img src={"https://forbiddengdz.ru/gdz" + book["cover"]["url"]} alt="book"/>
             <Link to={book["url"]}>{book.title}</Link>
-        </div>);
+        </div>
+    );
 };
 
 export default BookInfo;

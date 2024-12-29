@@ -47,12 +47,12 @@ const GoogleFormsAnswers = ({url}) => {
                                     <div>
                                         {form.map(field => <GoogleFormsAnswer fieldData={field}
                                                                               answer={answers.reduce((value, e) => {
-                                                                                  if (e.field_id === field.field_id) {
+                                                                                  if (e['field_id'] === field['field_id']) {
                                                                                       return e
                                                                                   } else {
                                                                                       return value
                                                                                   }
-                                                                              }, undefined)}/>)}
+                                                                              }, undefined)} key={field['field_id']}/>)}
                                     </div>
                                 }
                             </div>
