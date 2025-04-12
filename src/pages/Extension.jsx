@@ -20,6 +20,13 @@ const Extension = () => {
                     </span>
                     </Link>
                 </p>
+                <p>
+                    <Link to="/privacy_policy">
+                    <span>
+                        политика конфиденциальности
+                    </span>
+                    </Link>
+                </p>
                 <Finder placeholder="Введите URL задания" callback={(text) => setUrl(text)}/>
                 {url !== '' &&
                     <ExtensionAnswer url={url}/>
